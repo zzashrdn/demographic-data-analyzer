@@ -1,6 +1,7 @@
 import unittest
 import demographic_data_analyzer
 
+
 class DemographicAnalyzerTestCase(unittest.TestCase):
     def setUp(self):
         self.data = demographic_data_analyzer.calculate_demographic_data(print_data=False)
@@ -57,4 +58,6 @@ class DemographicAnalyzerTestCase(unittest.TestCase):
 
 
 def test(function):
-    unittest.main(exit=False)
+    suite = unittest.TestLoader().loadTestsFromTestCase(DemographicAnalyzerTestCase)
+    unittest.TextTestRunner(verbosity=2).run(suite)
+
