@@ -1,0 +1,4 @@
+from test_module import test
+from demographic_data_analyzer import calculate_demographic_data
+
+test(calculate_demographic_data)
